@@ -32,6 +32,8 @@ Partial Class Form1
         Me.ButtonInsert = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonUpdate = New System.Windows.Forms.Button()
+        Me.ButtonDELETE = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -94,7 +96,7 @@ Partial Class Form1
         '
         'ButtonInsert
         '
-        Me.ButtonInsert.Location = New System.Drawing.Point(259, 217)
+        Me.ButtonInsert.Location = New System.Drawing.Point(9, 204)
         Me.ButtonInsert.Name = "ButtonInsert"
         Me.ButtonInsert.Size = New System.Drawing.Size(248, 48)
         Me.ButtonInsert.TabIndex = 7
@@ -104,25 +106,45 @@ Partial Class Form1
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(185, 325)
+        Me.DataGridView1.Location = New System.Drawing.Point(274, 216)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(419, 73)
+        Me.DataGridView1.Size = New System.Drawing.Size(419, 222)
         Me.DataGridView1.TabIndex = 8
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(259, 271)
+        Me.Button1.Location = New System.Drawing.Point(12, 258)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(248, 48)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "READ(Retrieve Data)"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'ButtonUpdate
+        '
+        Me.ButtonUpdate.Location = New System.Drawing.Point(12, 312)
+        Me.ButtonUpdate.Name = "ButtonUpdate"
+        Me.ButtonUpdate.Size = New System.Drawing.Size(248, 48)
+        Me.ButtonUpdate.TabIndex = 10
+        Me.ButtonUpdate.Text = "update"
+        Me.ButtonUpdate.UseVisualStyleBackColor = True
+        '
+        'ButtonDELETE
+        '
+        Me.ButtonDELETE.Location = New System.Drawing.Point(6, 366)
+        Me.ButtonDELETE.Name = "ButtonDELETE"
+        Me.ButtonDELETE.Size = New System.Drawing.Size(248, 48)
+        Me.ButtonDELETE.TabIndex = 11
+        Me.ButtonDELETE.Text = "Delete"
+        Me.ButtonDELETE.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ButtonDELETE)
+        Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ButtonInsert)
@@ -151,4 +173,6 @@ Partial Class Form1
     Friend WithEvents ButtonInsert As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonUpdate As Button
+    Friend WithEvents ButtonDELETE As Button
 End Class
