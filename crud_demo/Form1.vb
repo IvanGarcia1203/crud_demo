@@ -35,6 +35,20 @@ Public Class Form1
         End Try
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim query As String = "SELECT * FROM crud_demo_db.students_tbl;"
+        Try
+            Using conn As New MySqlConnection("server=localhost; userid=root; password=root; database= crud_demo_db")
+                Dim adapter As New MySqlDataAdapter(query, conn) 'GET FROM
+                Dim table As New DataTable() 'TBALE OBJECT
+                adapter.Fill(table) 'FROM ADAPTER TO TABLE OBJECT
+                DataGridView1.DataSource = table 'Display to DATAGRIDVIEW
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class
 
 
